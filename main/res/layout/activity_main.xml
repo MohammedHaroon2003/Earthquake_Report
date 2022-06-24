@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    >
+  <!-- layout for a list of earthquakes -->
+<ListView
+    android:id="@+id/list"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+
+
+    <!-- view that only visible when no earthquakes founded -->
+    <!-- if you dont use the setEmptyView() method it will overlap in the center of textView -->
+    <!-- setEmptyView() method is used when we need to set a text in empty state of the app -->
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="#000000"
+        />
+
+
+    <!-- view that only visible only before onLoadFinished() method is called  -->
+    <ProgressBar
+        android:id="@+id/loading_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        style="@style/Widget.AppCompat.ProgressBar"
+        />
+
+</RelativeLayout>
